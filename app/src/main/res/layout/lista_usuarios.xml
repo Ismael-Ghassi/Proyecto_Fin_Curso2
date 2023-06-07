@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/etiqueta_cliente"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:animateLayoutChanges="true"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imagen_por_defecto"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/asignar_icono"
+                app:shapeAppearanceOverlay="@style/rectangularImageViewRoundedPerfil"
+                android:scaleType="centerCrop"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="6dp"
+                android:layout_toEndOf="@id/imagen_por_defecto"
+                android:layout_toRightOf="@id/imagen_por_defecto"
+                android:orientation="vertical"
+                android:layout_marginLeft="4dp">
+
+
+                <TextView
+                    android:id="@+id/lista_usuarios_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text="Nombre"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_toEndOf="@id/imagen_por_defecto"
+                android:layout_toRightOf="@id/imagen_por_defecto"
+                android:orientation="horizontal"
+                android:layout_marginLeft="4dp">
+                <TextView
+                    android:id="@+id/lista_usuarios_correo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="correo electronico"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

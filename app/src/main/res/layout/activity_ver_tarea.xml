@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Ver_Tarea"
+    android:id="@+id/id_tareas">
+
+    <ScrollView
+        android:id="@+id/scroll_verTarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imagen_VerTarea"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/rectangularImageViewRoundedPerfil"
+                    android:scaleType="centerCrop"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="7dp">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/carta_correo_ver_tarea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="#60000000"
+                        android:visibility="invisible">
+                        <TextView
+                            android:id="@+id/texto_correo_asignado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="center"
+                            android:text=""
+                            android:padding="3dp"
+                            android:textColor="#E8E3E3"
+                            android:textSize="18dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/boton_asignar_usuario"
+                            android:layout_width="40dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center|right"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginRight="10dp"
+                            android:clickable="true"
+                            android:src="@drawable/imagen_asignar_usuario"
+                            android:visibility="visible"
+                            android:background="#60000000"
+                            app:shapeAppearanceOverlay="@style/roundedImageViewRoundedPerfil"/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="340dp">
+
+                    <ImageView
+                        android:id="@+id/eliminar_tarea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center|right"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="10dp"
+                        android:clickable="true"
+                        android:src="@drawable/eliminar_imagen"
+                        android:visibility="visible" />
+
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+
+            <EditText
+                android:id="@+id/titulo_VerTarea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:text="TextView"
+                android:background="@null"
+                android:textSize="25dp"
+                android:visibility="gone"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imagen_VerTarea" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_2_verTarea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:paddingTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titulo_VerTarea">
+
+                <EditText
+                    android:id="@+id/texto_descripcion_VerTarea"
+                    android:layout_width="385dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Descripcion de la tarea..."
+                    android:padding="5dp"
+                    android:textSize="15dp"
+                    android:maxLines="10"
+                    android:gravity="top"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESTADO"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+
+
+            <RadioGroup
+                android:id="@+id/radioGroupEstadoTarea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radioButtonCompletado"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Completado"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonNoCompletado"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="No completado"
+                    android:layout_marginLeft="20dp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textoComentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COMENTARIOS"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+
+                />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_3_verTarea"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:paddingTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoComentarios"
+                >
+
+                <EditText
+                    android:id="@+id/texto_Escribir_comentario"
+                    android:layout_width="345dp"
+                    android:layout_height="60dp"
+                    android:background="@null"
+                    android:hint="Escribe un comentario..."
+                    android:padding="5dp"
+                    android:textSize="15dp"
+                    android:maxLines="5"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/insertar_comentario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@drawable/arrow_imagen"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/insertar_imagen_comentario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@drawable/imagen_galeria"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="10dp"
+                    android:visibility="visible"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_comentarios_tarea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/progressBar_carga_ver_tarea"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:visibility="visible"/>
+
+
+</FrameLayout>

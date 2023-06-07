@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "322496481843",
+    "project_id": "proyecto-fin-de-curso-a5ef1",
+    "storage_bucket": "proyecto-fin-de-curso-a5ef1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322496481843:android:0a23f8d74122c491a6f146",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_fin_curso"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322496481843-8gs17l4qcedpicisldfmroe7sa6fklfn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.proyecto_fin_curso",
+            "certificate_hash": "323e8feff5ca858f57b619b86a78249842a7db13"
+          }
+        },
+        {
+          "client_id": "322496481843-kkko5bvhn6836s068mvqhlvfinsdb86a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAObZJwsaPidFCJti-Ggv8hiCoeVycD1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322496481843-2e55tgh07ijai250bcf0jt0mf5srf4hn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

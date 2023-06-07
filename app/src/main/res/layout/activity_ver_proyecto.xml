@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefreshLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Ver_proyecto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ScrollView
+                android:id="@+id/scroll_verProyecto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="invisible">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imagen_proyecto"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shapeAppearanceOverlay="@style/rectangularImageViewRoundedPerfil"
+                            android:scaleType="centerCrop"
+                            />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginLeft="30dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/carta_marco"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginLeft="20dp"
+                                app:cardCornerRadius="15dp"
+                                app:cardBackgroundColor="#60000000">
+
+                                <TextView
+                                    android:id="@+id/codigo_animado"
+                                    android:layout_width="280dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginEnd="5dp"
+                                    android:gravity="center|top"
+                                    android:text="Texto que se mueve"
+                                    android:textColor="#FFFEFE"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"/>
+
+                                <ImageView
+                                    android:id="@+id/copiar_codigo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_gravity="center|right"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginRight="10dp"
+                                    android:clickable="true"
+                                    android:src="?attr/actionModeCopyDrawable"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginLeft="340dp">
+
+                            <ImageView
+                                android:id="@+id/eliminar_proyecto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="center|right"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginRight="10dp"
+                                android:clickable="true"
+                                android:src="@drawable/eliminar_imagen"
+                                android:visibility="visible" />
+
+
+                        </RelativeLayout>
+
+                    </FrameLayout>
+
+
+                    <EditText
+                        android:id="@+id/titulo_proyecto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="20dp"
+                        android:text="TextView"
+                        android:background="@null"
+                        android:textSize="28dp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imagen_proyecto" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:paddingTop="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/titulo_proyecto">
+
+                        <EditText
+                            android:id="@+id/texto_descripcion_proyecto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint=""
+                            android:padding="5dp"
+                            android:textSize="15dp"
+                            android:maxLines="10"
+                            android:gravity="top"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="62dp"
+                            android:layout_marginTop="24dp"
+                            android:text="Tareas completadas:"
+                            android:textSize="15dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card_2" />
+                        <TextView
+                            android:id="@+id/tareas_completadas_proyecto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="24dp"
+                            android:text=""
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/textView7"
+                            app:layout_constraintTop_toBottomOf="@+id/card_2" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progreso_tarea_Ver_Proyecto"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="35dp"
+                        android:progressDrawable="@drawable/progress_bar__custom"
+                        android:progressTint="#6AF123"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView7"
+                        />
+
+
+
+
+                    <TextView
+                        android:id="@+id/estado_proyecto"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="150dp"
+                        android:layout_marginEnd="150dp"
+                        android:layout_marginTop="12dp"
+                        android:text="TextView"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/progreso_tarea_Ver_Proyecto"
+                        android:textColor="#0ACC29"
+                        android:gravity="center"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/estilos_relative_layout">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="13dp"
+                            android:layout_marginTop="11dp"
+                            android:text="TAREAS"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <Button
+                            android:id="@+id/insertar_tarea"
+                            android:layout_width="50dp"
+                            android:layout_height="55dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginRight="130dp"
+                            android:text="+"
+                            android:textAlignment="center"
+                            android:textSize="25dp"
+                            app:cornerRadius="500dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:textColor="@color/white"
+                            android:backgroundTint="@color/teal_200"/>
+
+                    </RelativeLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView_tareas_proyecto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </LinearLayout>
+
+            </ScrollView>
+            <ProgressBar
+                android:id="@+id/progressBar_carga_ver_proyecto"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="350dp"
+                android:visibility="visible"/>
+
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
